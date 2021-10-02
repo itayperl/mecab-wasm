@@ -1,4 +1,4 @@
-PRODUCTS := libmecab.js libmecab.data libmecab.wasm
+PRODUCTS := lib/libmecab.js lib/libmecab.data lib/libmecab.wasm
 
 .PHONY: all
 all: $(PRODUCTS)
@@ -11,8 +11,3 @@ mecab-ipadict/dist/sys.dic:
 
 $(PRODUCTS): mecab/src/.libs/libmecab.so mecab-ipadict/dist/sys.dic build_js.sh
 	@bash -x ./build_js.sh
-
-dist: mecab-wasm.zip
-
-mecab-wasm.zip: $(PRODUCTS)
-	zip $@ $(PRODUCTS)

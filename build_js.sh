@@ -1,6 +1,6 @@
 #!/bin/bash
 
-emcc mecab/src/.libs/libmecab.so -o libmecab.js -g \
+emcc mecab/src/.libs/libmecab.so -o lib/libmecab.js -g \
     -s MODULARIZE -s EXPORT_ES6=1 \
     -s ASSERTIONS=1 -s SAFE_HEAP=1 -s STACK_OVERFLOW_CHECK=1 -s INITIAL_MEMORY=199950336 \
     -s EXPORTED_FUNCTIONS='["_mecab_new2", "_mecab_sparse_tostr3"]' \

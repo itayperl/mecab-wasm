@@ -1,4 +1,4 @@
-libmecab.*
+lib/libmecab.*
 mecab-wasm.zip
 *.o
 *.lo
@@ -21,6 +21,7 @@ mecab/libtool
 mecab/mecabrc
 mecab/mecab.iss
 mecab/mecab-config
+mecab/a.wasm
 
 mecab-ipadict/dist
 mecab-ipadict/Makefile
