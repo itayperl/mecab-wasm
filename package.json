@@ -22,7 +22,9 @@
     "lib/libmecab.data",
     "lib/libmecab.js",
     "lib/libmecab.wasm",
-    "lib/mecab.js"
+    "lib/mecab.js",
+    "LICENSE.mecab",
+    "LICENSE.mecab-ipadict"
   ],
   "exports": [ "lib/mecab.js" ],
   "homepage": "https://github.com/itayperl/mecab-wasm"
