@@ -5,4 +5,4 @@ mecab-wasm
 
 This repository builds Mecab with Emscripten, so it can be used in a browser.
 
-See [index.html](index.html) for a usage example.
+See [examples/](examples/) for usage examples.
