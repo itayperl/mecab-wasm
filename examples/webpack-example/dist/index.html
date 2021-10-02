@@ -14,21 +14,7 @@
             #in { height: 3em; }
             #out { height: 15em; }
         </style>
-        <script type="module">
-            import Mecab from "./lib/mecab.js";
-
-            function init() {
-                document.getElementById('button').addEventListener('click', function() {
-                    let text = document.getElementById('in').value;
-                    let result = Mecab.query(text);
-                    document.getElementById('out').value = JSON.stringify(result, null, 2);
-                });
-            }
-
-            window.addEventListener('load', function() {
-                Mecab.waitReady().then(init);
-            });
-        </script>
+        <script type="module" src="main.js"></script>
     </head>
     <body>
         <div id="container">
@@ -42,4 +28,5 @@
         <div>
     </body>
 </html>
+
 

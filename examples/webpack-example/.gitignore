@@ -1,0 +1,4 @@
+dist/*.wasm
+dist/*.data
+dist/main.js
+node_modules/

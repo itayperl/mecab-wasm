@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <style type="text/css">
+            #container {
+                width: 40%;
+                margin: 0 auto;
+            }
+            textarea {
+                width: 100%;
+                display: block;
+                margin: 10px 0;
+            }
+            #in { height: 3em; }
+            #out { height: 15em; }
+        </style>
+        <script type="module">
+            import Mecab from "https://unpkg.com/mecab-wasm@1.0.0/lib/mecab.js";
+
+            function init() {
+                document.getElementById('button').addEventListener('click', function() {
+                    let text = document.getElementById('in').value;
+                    let result = Mecab.query(text);
+                    document.getElementById('out').value = JSON.stringify(result, null, 2);
+                });
+            }
+
+            window.addEventListener('load', function() {
+                Mecab.waitReady().then(init);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div>
+                <textarea id="in">吾輩は猫である</textarea>
+                <button id="button">Analyze</button>
+            </div>
+            <div>
+                <textarea id="out"></textarea>
+            </div>
+        <div>
+    </body>
+</html>
+
